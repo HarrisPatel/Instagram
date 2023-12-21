@@ -8,6 +8,7 @@ import { StoryComponent } from './stories/story/story.component';
 import { HighlightsComponent } from './profile/highlights/highlights.component';
 import { ReelsComponent } from './reels/reels.component';
 import { CreateComponent } from './create/create.component';
+import { UploadComponent } from './upload/upload.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     component: CreateComponent,
     path: 'create'
+  },
+  {
+    component: UploadComponent,
+    path: 'upload'
   },
   
 ];

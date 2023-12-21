@@ -28,7 +28,8 @@
 }
 .selected-image img{
     width: 100%;
-    height: 50%;
+    height: 400px;
+    text-align: center;
 }
 .copy{
     background-color: rgb(14, 143, 255);
@@ -63,4 +64,5 @@
 }
 .fix-area{
     position: fixed;
+    width: 100%;
 }

@@ -13,6 +13,7 @@ import { HighlightsComponent } from './profile/highlights/highlights.component';
 import { AccountPostComponent } from './account-post/account-post.component';
 import { ReelsComponent } from './reels/reels.component';
 import { CreateComponent } from './create/create.component';
+import { UploadComponent } from './upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CreateComponent } from './create/create.component';
     AccountPostComponent,
     ReelsComponent,
     CreateComponent,
+    UploadComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [

@@ -31,6 +31,7 @@ export class StoryService {
   ]
 
   gallery:any =[
+    { image:'assets/images/Image_20231220_165247_397.jpeg'},
     { image:'assets/post/car1.jpeg'},
     { image:'assets/post/car2.jpeg'},
     { image:'assets/post/iphone1.jpeg'},
