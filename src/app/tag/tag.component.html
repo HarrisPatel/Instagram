@@ -1,6 +1,6 @@
 <div class="tag-page">
-    <div *ngIf="search == false" class="top-bar d-flex justify-content-between">
-        <div class="d-flex top-first">
+    <div  class="top-bar d-flex justify-content-between">
+        <div *ngIf="search == false" class="d-flex top-first">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x"
                 viewBox="0 0 16 16" (click)="cancel()">
                 <path
@@ -8,16 +8,58 @@
             </svg>
             <h5>Tag people</h5>
         </div>
-        <div class="top-second">
-            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
-                class="bi bi-arrow-right" viewBox="0 0 16 16" style="color: rgb(65, 166, 255);" (click)="done()">
-                <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+        <div *ngIf="search == false" class="top-second">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2"
+                viewBox="0 0 16 16" style="color: rgb(65, 166, 255);" (click)="done()">
+                <path
+                    d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
             </svg>
         </div>
-        
+        <div *ngIf="search == true" class="search-user d-flex" >
+            <div class="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                  </svg>
+            </div>
+           <input type="text" placeholder="Search for user"  [(ngModel)]="searchTerm" (keyup)="Search($event)" [ngClass]="find_tags == true? 'curve': ''">
+           <div class="cancel-icon"  *ngIf="find_tags == true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x"
+                viewBox="0 0 16 16" (click)="cancelIcon()">
+                <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+            </svg>
+           </div>
+        </div>
+
     </div>
-    <div class="selected-image">
-        <img [src]="selectedImage" alt="">
+    <div *ngIf="find_tags == false" class="selected-image">
+        <img [src]="selectedImage" alt="" (click)="tapImage()">
+    </div>
+    <div *ngIf="find_tags == false" class="tagged-peoples">
+        <div class="invite">
+            <p>Invite collaborators</p>
+        </div>
+        <div *ngIf="tag_people.length == 0" class="tag-empty">
+            Tap photo to tag people.
+        </div>
+        <div *ngIf="tag_people.length !== 0" class="tag-peoples">
+            <p>Tags</p>
+            <ng-container *ngFor="let t of tag_people">
+                <div class="tag-profile d-flex">
+                    <div class="profile-1 d-flex">
+                        <img src="" alt="">
+                        <div class="profile-info">
+                            <p id="name"></p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                    </svg>
+                </div>
+            </ng-container>
+        </div>
     </div>
 </div>

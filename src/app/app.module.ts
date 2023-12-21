@@ -14,6 +14,7 @@ import { AccountPostComponent } from './account-post/account-post.component';
 import { ReelsComponent } from './reels/reels.component';
 import { CreateComponent } from './create/create.component';
 import { TagComponent } from './tag/tag.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,12 +30,15 @@ import { TagComponent } from './tag/tag.component';
     ReelsComponent,
     CreateComponent,
     TagComponent, 
+
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CarouselModule
+    CarouselModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
