@@ -1,0 +1,66 @@
+.top-bar{
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.top-bar h5{
+    margin-top: 7px;
+    margin-left: 18px;
+}
+.top-first svg{
+    margin-left: 10px;
+}
+.top-second svg{
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.select{
+    background-color: black;
+    padding: 10px 0;
+    color: white;
+}
+
+.select-top h5{
+    margin: 0;
+    margin-top: 7px;
+
+}
+.selected-image img{
+    width: 100%;
+    height: 50%;
+}
+.copy{
+    background-color: rgb(14, 143, 255);
+    padding: 8px;
+    border-radius: 60px;
+    padding: 8px 11px;
+    margin-right: 7px;
+}
+.copy svg{
+    margin-bottom: 3px;
+}
+.camera{
+    background-color: rgb(77, 76, 76);
+    padding: 8px;
+    border-radius: 60px;
+    padding: 8px 11px;
+}
+.camera svg{
+    margin-bottom: 3px;
+}
+.select-top{
+    margin:0 10px
+}
+.gallery{
+    padding-top: 539px;
+    padding-bottom: 63px;
+    background-color: black;
+}
+.gallery img{
+    width: 96px;
+    height: 100px;
+}
+.fix-area{
+    position: fixed;
+}

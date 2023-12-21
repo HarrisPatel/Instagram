@@ -12,6 +12,7 @@ import { StoryComponent } from './stories/story/story.component';
 import { HighlightsComponent } from './profile/highlights/highlights.component';
 import { AccountPostComponent } from './account-post/account-post.component';
 import { ReelsComponent } from './reels/reels.component';
+import { CreateComponent } from './create/create.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ReelsComponent } from './reels/reels.component';
     HighlightsComponent,
     AccountPostComponent,
     ReelsComponent,
+    CreateComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [

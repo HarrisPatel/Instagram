@@ -1,0 +1,66 @@
+<div class="create-post">
+    <div class="fix-area">
+        <div class="top-bar d-flex justify-content-between">
+            <div class="d-flex top-first">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg>
+                <h5>New post</h5>
+            </div>
+            <div class="top-second">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                    class="bi bi-arrow-right" viewBox="0 0 16 16" style="color: rgb(65, 166, 255);">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+            </div>
+
+        </div>
+        <div class="selected-image">
+            <img [src]="selectedImage" alt="">
+        </div>
+        <div class="select">
+            <div class="select-top d-flex justify-content-between">
+                <div class="d-flex">
+                    <h5>Recents</h5>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-down" viewBox="0 0 16 16"
+                        style="color: white; margin-top:10px; margin-left:5px">
+                        <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </div>
+                <div class="d-flex">
+                    <div class="copy">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-copy" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                        </svg>
+                    </div>
+                    <div class="camera">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-camera" viewBox="0 0 16 16">
+                            <path
+                                d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z" />
+                            <path
+                                d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="row row-cols-4 row-cols-md-3 w-100">
+            <ng-container *ngFor="let image of gallery">
+                <div class="col">
+                    <img [src]="image.image" alt="">
+                </div>
+
+            </ng-container>
+        </div>
+    </div>
+</div>
