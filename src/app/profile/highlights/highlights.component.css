@@ -1,0 +1,38 @@
+.container {
+    background-color: black;
+        padding-bottom: 20px;
+}
+
+.high-bar {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    height: 120px;
+}
+
+.highlights {
+    width: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    cursor: pointer;
+    color: white;
+    cursor: pointer;
+}
+.high-text{
+    margin-left: 5px;
+}
+
+.high-text p{
+    color: white;
+    display: flex;
+    align-items: baseline;
+    width: 39px;
+    float: left;
+    margin: 0px 26px;
+    background-color: black;
+    margin-top: -20px;
+    cursor: pointer;
+
+}

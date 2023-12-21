@@ -1,0 +1,122 @@
+.account_bar {
+    background-color: black;
+    color: white;
+    display: flex;
+    padding-top: 15px;
+}
+.arrow{
+    margin-top: 8px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.upload-icon {
+    margin-left: 46%;
+    margin-right: 10px;
+    width: 27px;
+}
+
+.side-bar {
+    margin-top: -2px;
+}
+
+.profile_image img {
+    width: 90px;
+    border-radius: 60%;
+    border: 3px solid rgb(220, 99, 119);
+    padding: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.container {
+    background-color: black;
+}
+
+.account_pro {
+    display: flex;
+    color: white;
+}
+
+.account-info {
+    display: flex;
+}
+
+.post {
+    text-align: center;
+    margin-left: 32px;
+}
+
+.post h4 {
+    margin-bottom: -27px;
+    margin-top: 40px;
+
+}
+
+.post p {
+
+    font-size: 14px;
+}
+
+.followers {
+    text-align: center;
+    margin-left: 40px;
+}
+
+.followers h4 {
+    margin-bottom: -27px;
+    margin-top: 40px;
+
+}
+
+.followers p {
+
+    font-size: 14px;
+}
+
+.following {
+    text-align: center;
+    margin-left: 32px;
+}
+
+.following p {
+
+    font-size: 14px;
+}
+
+.following h4 {
+    margin-bottom: -27px;
+    margin-top: 40px;
+
+}
+.account-bio{
+    color: white;
+    padding-bottom: 10px;
+}
+#des{
+    width: 250px;
+    margin-top: -15px;
+}
+#type {
+    color: gray;
+    margin-top: -15px;
+}
+.button .add{
+    border-style: none;
+    color: white;
+    background-color: rgb(55, 54, 54);
+    margin: 0px 3px;
+    padding: 5px 7px;
+    border-radius: 10px;
+}
+.button #btn{
+    padding: 5px 35px;
+    border-style: none;
+    color: white;
+    background-color: rgb(55, 54, 54);
+    margin: 0px 3px;
+    border-radius: 10px;
+}
+.button{
+    margin-left: 6px;
+}

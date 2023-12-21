@@ -1,0 +1,10 @@
+<div class="reel-head">
+</div>
+<swiper-container class="reel-container" direction="vertical" #swiper (swiperafterinit)="swiperReady($event)"
+    (swiperslidechange)="change($event)">
+    <swiper-slide class="reel-slide" *ngFor="let reel of mediaArea; let i = index;">
+        <video controls [autoplay]="activeIndex == i ? true : false" class="video" src="{{reel.media}}">
+        </video>
+    </swiper-slide>
+
+</swiper-container>

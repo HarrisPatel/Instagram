@@ -1,0 +1,50 @@
+.story {
+    width: 100%;
+}
+
+.story-back {
+    background-color: rgb(47, 45, 45);
+    z-index: 4;
+}
+
+.pre {
+
+    position: absolute;
+    padding: 100% 50px;
+    z-index: 9;
+    background: transparent;
+    border: none;
+}
+
+.next {
+    position: absolute;
+    right: 0px;
+    padding: 100% 50px;
+    z-index: 9;
+    background: transparent;
+    border: none;
+}
+
+.user {
+    padding: 10px;
+    display: flex;
+}
+
+.user p {
+    color: white;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.user img {
+    width: 60px;
+    height: 60px;
+    border-radius: 60%;
+    border: 3px solid rgb(220, 99, 119);
+    padding: 4px;
+
+}
+
+.gaph {
+    padding-bottom: 50px;
+}

@@ -1,0 +1,21 @@
+<div class="story-back">
+    <div class="story">
+        <button class="pre" (click)="goPrev()"></button>
+        <button class="next" (click)="goNext()"></button>
+        <div class="user">
+            <img [src]="user" alt="image">
+            <p>{{story.u_name}}</p>
+        </div>
+        <swiper-container #swiper (afterinint)="swiperReady()" speed="100" (slidechange)="slideChanged($event)"
+            style="height: 83vh;">
+            <swiper-slide *ngFor="let s of storyarr" style="height: 100%;">
+                <img [src]="s.image" width="100%" height="100%" style="object-fit: contain;" *ngIf="s.type == 'image' ">
+
+                <video controls *ngIf="s.type == 'video'" autoplay src="{{s.image}}" style="width: 100%; height: 100%;">
+                </video>
+            </swiper-slide>
+
+        </swiper-container>
+
+    </div>
+</div>

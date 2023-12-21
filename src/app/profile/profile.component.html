@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="account_bar">
+    <h3>{{prostory.u_name}}</h3>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down arrow"
+      viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+      class="bi bi-plus-squared upload-icon" viewBox="0 0 16 16">
+      <path
+        d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-list side-bar"
+      viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+    </svg>
+  </div>
+  <div class="account_pro">
+    <div class="profile_image">
+      <img [src]="prostory.u_image" (click)="storyopen()">
+    </div>
+    <div class="account-info">
+      <div class="post">
+        <h4>139</h4><br>
+        <p>Posts</p>
+      </div>
+      <div class="followers">
+        <h4>32.4K</h4><br>
+        <p>Followers</p>
+      </div>
+      <div class="following">
+        <h4>6</h4><br>
+        <p>Following</p>
+      </div>
+    </div>
+  </div>
+  <div class="account-bio">
+    <p id="name">{{accountbio.name}}</p>
+    <p id="type">{{accountbio.type}}</p>
+    <p id="des"><span>
+        {{
+        seeMore
+        ? accountbio.des
+        : accountbio.des.slice(0, 80)
+        }}
+      </span>
+      <span style="color: gray;" *ngIf="accountbio.des.length > 80" (click)="seeMore = !seeMore">
+        {{ !seeMore ? "...see more" : "show less"}}
+      </span>
+    </p>
+    <div *ngIf="accountbio.des.length >= 1000">
+      <span class="arrow-down"></span>
+    </div>
+    <div class="button">
+      <button class="edit" id="btn">Edit profile</button>
+      <button class="share" id="btn">Share profile</button>
+      <button class="add">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+          <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+          <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+</div>
+<app-highlights></app-highlights>
+<app-account-post></app-account-post>

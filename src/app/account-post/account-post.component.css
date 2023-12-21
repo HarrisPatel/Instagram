@@ -1,0 +1,40 @@
+.my-post {
+    background-color: black;
+    padding-bottom: 740px;
+
+}
+
+.navbar svg {
+    color: white;
+    width: 190px;
+    cursor: pointer;
+}
+
+.gaph {
+    padding-bottom: 40px;
+}
+
+.image-div {
+    width: 33.3%;
+    float: left;
+    height: 150px;
+}
+
+.image-div img {
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+}
+
+.video-div {
+    width: 33.3%;
+    float: left;
+    height: 235px;
+}
+
+.video-div video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    width: 131px;
+}

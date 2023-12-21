@@ -1,0 +1,20 @@
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reel-container {
+    height: 83vh;
+}
+
+.reel-slide {
+    height: 100%;
+}
+
+.reel-head {
+    color: white;
+    background-color: black;
+    padding-bottom: 5px;
+    padding-top: 15px;
+}

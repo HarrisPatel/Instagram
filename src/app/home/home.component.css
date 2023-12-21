@@ -1,0 +1,82 @@
+.post {
+    background-color: black;
+}
+
+.post-user {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -20px 7px;
+    padding-bottom: 30px;
+    padding-top: 5px;
+}
+
+.post-user img {
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 60%;
+    border: 1.6px solid rgb(220, 99, 119);
+    padding: 2px;
+    cursor: pointer;
+}
+
+.post-user p {
+    color: white;
+    line-height: 2px;
+    margin-top: 14px;
+    margin-left: 8px;
+    width: 50px;
+}
+
+.main-post img {
+    width: 100%;
+}
+
+.post-res {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-left: 20px;
+}
+
+.post-save {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 15px;
+    float: right;
+    margin-right: 20px;
+}
+
+.post-des #like {
+    color: white;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.post-des #des {
+    color: white;
+    margin-left: 15px;
+    margin-top: -15px;
+    ;
+}
+
+.post-des #com {
+    color: gray;
+    margin-left: 15px;
+    margin-top: -15px;
+}
+
+.post-des #time {
+    color: gray;
+    margin-left: 15px;
+    margin-top: -17px;
+    padding-bottom: 15px;
+}
+
+.gaph {
+    padding-bottom: 40px;
+}
