@@ -25,7 +25,7 @@ export class CreateComponent implements OnInit{
     this.router.navigate(['/'])
   }
   done(){
-    this.router.navigate(['/upload'])
+    this.router.navigate(['/tag'])
   }
   selectImage(index){
     console.log(index)
