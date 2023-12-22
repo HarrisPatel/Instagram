@@ -1,5 +1,5 @@
 <div class="tag-page">
-    <div  class="top-bar d-flex justify-content-between">
+    <div class="top-bar d-flex justify-content-between">
         <div *ngIf="search == false" class="d-flex top-first">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x"
                 viewBox="0 0 16 16" (click)="cancel()">
@@ -15,51 +15,64 @@
                     d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
             </svg>
         </div>
-        <div *ngIf="search == true" class="search-user d-flex" >
+        <div *ngIf="search == true" class="search-user d-flex">
             <div class="search-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
             </div>
-           <input type="text" placeholder="Search for user"  [(ngModel)]="searchTerm" (keyup)="Search($event)" [ngClass]="find_tags == true? 'curve': ''">
-           <div class="cancel-icon"  *ngIf="find_tags == true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x"
-                viewBox="0 0 16 16" (click)="cancelIcon()">
-                <path
-                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-            </svg>
-           </div>
+            <input type="text" placeholder="Search for user" [(ngModel)]="searchTerm" (keyup)="Search($event)"
+                [ngClass]="find_tags == true? 'curve': ''">
+            <div class="cancel-icon" *ngIf="find_tags == true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16" (click)="cancelIcon()">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg>
+            </div>
         </div>
 
     </div>
     <div *ngIf="find_tags == false" class="selected-image">
-        <img [src]="selectedImage" alt="" (click)="tapImage()">
+        <img [src]="selectedImage" alt="" (click)="tapImage($event)">
+        <ng-container *ngFor="let t of tagBox">
+            <div class="tag-div"  [ngStyle]="{'top': t.y+'px', 'left': t.x-31+'px'}">
+                <p *ngIf="t.user_name !== ''" >{{t.user_name}}</p>
+                <p *ngIf="t.user_name == ''">Who's This?</p>
+            </div>
+        </ng-container>
+
     </div>
-    <div *ngIf="find_tags == false" class="tagged-peoples">
-        <div class="invite">
-            <p>Invite collaborators</p>
-        </div>
-        <div *ngIf="tag_people.length == 0" class="tag-empty">
-            Tap photo to tag people.
-        </div>
-        <div *ngIf="tag_people.length !== 0" class="tag-peoples">
-            <p>Tags</p>
-            <ng-container *ngFor="let t of tag_people">
-                <div class="tag-profile d-flex">
-                    <div class="profile-1 d-flex">
-                        <img src="" alt="">
-                        <div class="profile-info">
-                            <p id="name"></p>
-                            <p></p>
-                        </div>
+</div>
+<div *ngIf="find_tags == false" class="tagged-peoples">
+    <div class="invite">
+        <p>Invite collaborators</p>
+    </div>
+    <div *ngIf="tag_people.length == 0" class="tag-empty">
+        Tap photo to tag people.
+    </div>
+    <div *ngIf="tag_people.length !== 0" class="tag-peoples">
+        <p>Tags</p>
+        <div class='tag-bar' *ngFor="let t of tag_people, index as i">
+            <div class="tag-profile d-flex justify-content-between">
+                <div class="profile-1 d-flex">
+                    <img [src]="t.image" alt="">
+                    <div class="profile-info">
+                        <p id="name">{{t.user_name}}</p>
+                        <p>{{t.name}}</p>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                    </svg>
                 </div>
-            </ng-container>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x"
+                    id="i" (click)="remove(i)" viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg>
+            </div>
         </div>
     </div>
+</div>
+<div *ngIf="find_tags == true">
+    <app-search-peoples (parentFun)="parentFun($event)"></app-search-peoples>
 </div>

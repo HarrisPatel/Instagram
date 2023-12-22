@@ -13,6 +13,10 @@ export class AccountPostComponent {
   image: any = true
   @ViewChild('videoPlayer') videoplayer: ElementRef;
 
+  constructor(elementRef: ElementRef){
+    this.videoplayer = elementRef.nativeElement; 
+  }
+
 
 
   images = [
@@ -40,7 +44,7 @@ export class AccountPostComponent {
 
 
 
-  slideChanged(event) {
+  slideChanged(event:any) {
     console.log(event)
   }
 
@@ -57,7 +61,7 @@ export class AccountPostComponent {
   }
 
 
-  playVideo(video, i) {
+  playVideo(i:any) {
     let videoPlayer: any = document.getElementById('video' + i);
 
     if (videoPlayer.paused) {

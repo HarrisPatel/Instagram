@@ -1,0 +1,28 @@
+.tag-profile{
+    margin: 15px 17px;
+ }
+ .profile-1 img{
+     width: 60px;
+     height: 60px;
+     border-radius: 60px;
+ }
+ .profile-info{
+     margin-left: 13px;
+     margin-top: 5px;
+ }
+ .profile-info p{
+     margin: 0px;
+     font-size: 14px;
+     color: rgb(163, 162, 162);
+ }
+ .tag-profile svg{
+     margin-top: 15px;
+     color: rgb(163, 162, 162)
+ }
+ .profile-info #name{
+     color: white;
+ }
+ .users{
+    background-color: black;
+    padding-bottom: 610px;
+ }

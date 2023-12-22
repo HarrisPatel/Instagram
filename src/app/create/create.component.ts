@@ -27,7 +27,7 @@ export class CreateComponent implements OnInit{
   done(){
     this.router.navigate(['/tag'])
   }
-  selectImage(index){
+  selectImage(index:any){
     console.log(index)
     this.selectedImage = index.image
     localStorage.setItem('image',this.selectedImage)

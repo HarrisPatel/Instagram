@@ -15,7 +15,7 @@ export class ProfileComponent {
 
   constructor(private router: Router) { }
   ngOnInit(): void {
-    this.prostoryarr = JSON.parse(localStorage.getItem('alldata'));
+    this.prostoryarr = JSON.parse(localStorage.getItem('alldata')as any);
     this.prostory = this.prostoryarr[0]
     this.accountbio = {
       name: 'Mohammad Harris',

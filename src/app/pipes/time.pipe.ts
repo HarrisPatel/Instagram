@@ -10,7 +10,7 @@ export class TimePipe implements PipeTransform {
       const seconds = Math.floor((+new Date() - +new Date(value)) / 1000);
       if (seconds < 29)
         return 'Just now';
-      const intervals = {
+      const intervals:any = {
         'year': 31536000,
         'month': 2592000,
         'week': 604800,
@@ -19,7 +19,7 @@ export class TimePipe implements PipeTransform {
         'minute': 60,
         'second': 1
       };
-      let counter;
+      let counter:any;
       for (const i in intervals) {
         counter = Math.floor(seconds / intervals[i]);
         if (counter > 0)

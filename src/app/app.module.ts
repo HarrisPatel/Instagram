@@ -15,6 +15,9 @@ import { ReelsComponent } from './reels/reels.component';
 import { CreateComponent } from './create/create.component';
 import { TagComponent } from './tag/tag.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchPeoplesComponent } from './tag/search-peoples/search-peoples.component';
+import { SearchPipe } from './pipes/search.pipe';
+import { UploadComponent } from './upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AccountPostComponent,
     ReelsComponent,
     CreateComponent,
-    TagComponent, 
+    TagComponent,
+    SearchPeoplesComponent,
+    SearchPipe,
+    UploadComponent,
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

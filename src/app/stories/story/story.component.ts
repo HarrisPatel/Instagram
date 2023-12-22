@@ -18,13 +18,13 @@ export class StoryComponent {
   constructor(private activatedRoute: ActivatedRoute,) { }
 
   ngOnInit(): void {
-    this.story = JSON.parse(localStorage.getItem('data'));
+    this.story = JSON.parse(localStorage.getItem('data') as any);
     this.storyarr = this.story.story
     this.user = this.story.u_image
     console.log(this.storyarr)
   }
 
-  slideChanged(event) {
+  slideChanged(event:any) {
     console.log(event)
   }
 

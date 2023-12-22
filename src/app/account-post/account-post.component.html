@@ -20,7 +20,7 @@
     </div>
     <div class="videos" *ngIf="!image">
         <div *ngFor="let v of videos; let i = index;" class="video-div">
-            <video *ngIf="v.type == 'video'" src="{{v.media}}" [attr.id]="'video' + i" (click)="playVideo(v, i)"
+            <video *ngIf="v.type == 'video'" src="{{v.media}}" [attr.id]="'video' + i" (click)="playVideo(i)"
                 #videoPlayer>
             </video>
         </div>

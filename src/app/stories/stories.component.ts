@@ -171,7 +171,7 @@ export class StoriesComponent {
     console.log(this.story.image)
   }
 
-  store(data) {
+  store(data:any) {
     localStorage.setItem('data', JSON.stringify(data));
     this.router.navigate(['/story']);
   }
