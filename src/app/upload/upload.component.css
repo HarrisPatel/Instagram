@@ -1,0 +1,29 @@
+.top-bar{
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.top-bar h5{
+    margin-top: 7px;
+    margin-left: 18px;
+}
+.top-first svg{
+    margin-left: 10px;
+}
+.top-second svg{
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.upload-page{
+    background-color: black;
+}
+
+.upload-image{
+    text-align: center;
+}
+.upload-image img {
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+}

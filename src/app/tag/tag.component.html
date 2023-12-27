@@ -35,11 +35,11 @@
         </div>
 
     </div>
-    <div *ngIf="find_tags == false" class="selected-image">
+    <div id="id2" *ngIf="find_tags == false" class="selected-image" #draggableContainer (drop)="dropHandler($event)" (dragover)="dragOverHandler($event)">
         <img [src]="selectedImage" alt="" (click)="tapImage($event)">
-        <ng-container *ngFor="let t of tagBox">
-            <div class="tag-div"  [ngStyle]="{'top': t.y+'px', 'left': t.x-31+'px'}">
-                <p *ngIf="t.user_name !== ''" >{{t.user_name}}</p>
+        <ng-container *ngFor="let t of tagBox, let i = index">
+            <div  id="id1" class="tag-div" [ngStyle]="{'top': t.y+'px', 'left': t.x+'px'}" draggable="true" (dragstart)="onDragStart($event, i)">
+                <p *ngIf="t.user_name !== ''">{{t.user_name}}</p>
                 <p *ngIf="t.user_name == ''">Who's This?</p>
             </div>
         </ng-container>

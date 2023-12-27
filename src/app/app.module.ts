@@ -18,6 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchPeoplesComponent } from './tag/search-peoples/search-peoples.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { UploadComponent } from './upload/upload.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -40,11 +42,13 @@ import { UploadComponent } from './upload/upload.component';
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
     FormsModule,
     ReactiveFormsModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
